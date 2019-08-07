@@ -1,8 +1,6 @@
 FROM gitpod/workspace-full
 
-ENV PATH="$PATH":"/workspace/flutter/bin"
+ENV PATH="$PATH":"/home/gitpod/flutter/bin"
 
-RUN mkdir /workspace
-WORKDIR /workspace
-
-RUN git clone --branch stable https://github.com/flutter/flutter
+RUN cd /home/gitpod && \
+    git clone --branch stable https://github.com/flutter/flutter
