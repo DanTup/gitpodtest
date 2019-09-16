@@ -1,5 +1,8 @@
 image:
   file: Dockerfile
+ports:
+- port: 8080
+  onOpen: openPreview
 tasks:
 - command: >
     flutter doctor &&
